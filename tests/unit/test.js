@@ -3,7 +3,7 @@
  * Copyrights licensed under the MIT License. See the accompanying LICENSE file
  * for terms.
  */
-/* global before, describe, it */
+/* global before, beforeEach, describe, it */
 
 const fs = require('fs');
 const path = require('path');
@@ -18,6 +18,12 @@ describe('cannibalizr', () => {
   before('cannibalizr', () => {
     const outputDir = path.dirname(inputFixture.output.file);
     mkdirp(outputDir);
+  });
+
+  beforeEach(() => {
+    if (fs.existsSync(inputFixture.output.file)) {
+      fs.unlinkSync(inputFixture.output.file);
+    }
   });
 
   it('should produce the expected output', (done) => {
@@ -38,5 +44,7 @@ describe('cannibalizr', () => {
     expect(function () {
       cannibalizr(badOptions);
     }).to.throw(Error);
+
+    expect(fs.existsSync(inputFixture.output.file)).to.be.false;
   });
 });

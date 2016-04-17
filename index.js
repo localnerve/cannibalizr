@@ -82,26 +82,26 @@ module.exports = function cannibalizr (options) {
   //console.log('@@@ options.input' + require('util').inspect(options.input));
 
   Object.keys(options.input).forEach((item) => {
-    const input = options.input[item];
-    const contents = fs.readFileSync(input.file, { encoding: 'utf8' });
+    options.input[item].forEach((input) => {
+      const contents = fs.readFileSync(input.file, { encoding: 'utf8' });
 
-    input.captures.forEach((capSpec) => {
-      let m;
+      input.captures.forEach((capSpec) => {
+        let m;
 
-      output[item] || (output[item] = []);
+        output[item] || (output[item] = []);
 
-      if (capSpec.global) {
-        while ((m = capSpec.re.exec(contents)) !== null) {
-          output[item].push(m[capSpec.matchIndex].replace(reClean, ''));
+        if (capSpec.global) {
+          while ((m = capSpec.re.exec(contents)) !== null) {
+            output[item].push(m[capSpec.matchIndex].replace(reClean, ''));
+          }
+        } else {
+          m = capSpec.re.exec(contents);
+          if (m) {
+            output[item].push(m[capSpec.matchIndex].replace(reClean, ''));
+          }
         }
-      } else {
-        m = capSpec.re.exec(contents);
-        if (m) {
-          output[item].push(m[capSpec.matchIndex].replace(reClean, ''));
-        }
-      }
+      });
     });
-
     report(output[item], item);
   });
 
