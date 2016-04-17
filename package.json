@@ -1,0 +1,47 @@
+{
+  "name": "cannibalizr",
+  "version": "0.1.0",
+  "description": "Turns an old pile of rusty files into a new json data source",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/unit --recursive --reporter spec",
+    "cover": "istanbul cover --dir ${COVERAGE_DIR:-reports/coverage} -- _mocha tests/unit/* --recursive --reporter spec",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/localnerve/cannibalizr.git"
+  },
+  "keywords": [
+    "data",
+    "capture",
+    "regex",
+    "strings",
+    "multiple",
+    "files",
+    "json"
+  ],
+  "author": "Alex Grant (@localnerve)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/localnerve/cannibalizr/issues"
+  },
+  "homepage": "https://github.com/localnerve/cannibalizr#readme",
+  "engines": {
+    "node": "4.x - 5.x"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.2",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "eslint": "^2.8.0",
+    "istanbul": "^0.4.3",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.4.5",
+    "precommit-hook": "^3.0.0"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
+}
