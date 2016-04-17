@@ -1,4 +1,9 @@
 # Cannibalizr
+
+[![Build Status](https://secure.travis-ci.org/localnerve/cannibalizr.svg?branch=master)](http://travis-ci.org/localnerve/cannibalizr)
+[![Coverage Status](https://coveralls.io/repos/localnerve/cannibalizr/badge.svg?branch=master)](https://coveralls.io/r/localnerve/cannibalizr?branch=master)
+[![devDependency Status](https://david-dm.org/localnerve/cannibalizr/dev-status.svg)](https://david-dm.org/localnerve/cannibalizr#info=devDependencies)
+
 > A tool to pull strings from multiple files into a json file using regexes.
 
 ## What?
