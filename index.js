@@ -80,8 +80,6 @@ module.exports = function cannibalizr (options) {
     }
   };
 
-  //console.log('@@@ options.input' + require('util').inspect(options.input));
-
   Object.keys(options.input).forEach((item) => {
     options.input[item].forEach((input) => {
       const contents = fs.readFileSync(input.file, { encoding: 'utf8' });

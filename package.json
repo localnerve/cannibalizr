@@ -1,6 +1,6 @@
 {
   "name": "cannibalizr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Turns an old pile of rusty files into a new json data source",
   "main": "index.js",
   "scripts": {
@@ -31,6 +31,7 @@
   "engines": {
     "node": "4.x - 6.x"
   },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "chai": "^3.5.0",
