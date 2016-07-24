@@ -1,13 +1,15 @@
 # Cannibalizr
 
+[![npm version](https://badge.fury.io/js/cannibalizr.svg)](http://badge.fury.io/js/cannibalizr)
 [![Build Status](https://secure.travis-ci.org/localnerve/cannibalizr.svg?branch=master)](http://travis-ci.org/localnerve/cannibalizr)
 [![Coverage Status](https://coveralls.io/repos/localnerve/cannibalizr/badge.svg?branch=master)](https://coveralls.io/r/localnerve/cannibalizr?branch=master)
+[![Dependency Status](https://david-dm.org/localnerve/cannibalizr.svg)](https://david-dm.org/localnerve/cannibalizr)
 [![devDependency Status](https://david-dm.org/localnerve/cannibalizr/dev-status.svg)](https://david-dm.org/localnerve/cannibalizr#info=devDependencies)
 
 > A tool to pull strings from multiple files into a json file using regexes.
 
 ## What?
-> "Turns an old pile of rusty files into a new json data source!"
+> "Turns an old pile of rusty files into a shiny, new json data source!"
 
 This tool pulls select strings from multiple files and writes them to a
 structured json file.
@@ -16,9 +18,10 @@ single source of truth.
 
 *This is not the tool you are looking for.*
 
-Use this as a last resort.
-By nature, this is brittle solution as the source files will (presumably) change
-over time, and inevitably evade the capturing regexes at some point.
+**Use this as a last resort.**
+
+By nature, this is a brittle solution as the input files will (presumably) change
+over time, and inevitably evade your capturing regexes at some point.
 The usefulness of this tool depends on your regexes and the nature of the input
 they capture against (and other viable options available to you in your timeframe).
 
