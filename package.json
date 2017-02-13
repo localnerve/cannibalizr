@@ -1,6 +1,6 @@
 {
   "name": "cannibalizr",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Turns an old pile of rusty files into a new json data source",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/localnerve/cannibalizr#readme",
   "engines": {
-    "node": "4.x - 6.x"
+    "node": ">= 4"
   },
   "dependencies": {},
   "devDependencies": {
