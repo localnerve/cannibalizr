@@ -34,7 +34,7 @@
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.0.0",
-    "chai": "^3.5.0",
+    "chai": "^4.0.0",
     "coveralls": "^2.11.14",
     "eslint": "^3.6.1",
     "istanbul": "^0.4.5",
