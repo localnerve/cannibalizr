@@ -3,3 +3,6 @@ reports
 tmp
 node_modules
 .jshint*
+bundle.js
+*.tgz
+package
