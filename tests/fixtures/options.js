@@ -16,7 +16,7 @@ module.exports = {
       captures: [{
         global: true,
         matchIndex: 1,
-        re: /url\(([^\)]+)\)/ig
+        re: /url\(([^)]+)\)/ig
       }]
     }],
     apis: [{
@@ -24,7 +24,7 @@ module.exports = {
       captures: [{
         global: false,
         matchIndex: 1,
-        re: /xhrPath\s*\:\s*(?:'|")([^'"]+)/
+        re: /xhrPath\s*:\s*(?:'|")([^'"]+)/
       }]
     }]
   },
