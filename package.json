@@ -1,6 +1,6 @@
 {
   "name": "cannibalizr",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Turns an old pile of rusty files into a new json data source",
   "main": "index.js",
   "scripts": {

@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) 2016 - 2018 Alex Grant (@localnerve), LocalNerve LLC
+ * Copyrights licensed under the MIT License. See the accompanying LICENSE file
+ * for terms.
+ */
 /*eslint no-console:0 */
 const path = require('path');
 
