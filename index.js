@@ -3,8 +3,6 @@
  * Copyrights licensed under the MIT License. See the accompanying LICENSE file
  * for terms.
  */
-'use strict';
-
 const fs = require('fs');
 
 /**
@@ -71,7 +69,7 @@ module.exports = function cannibalizr (options) {
   const report = function (items, name) {
     if (options.logger) {
       if (items && items.length) {
-        items.forEach((str) => {
+        items.forEach(str => {
           options.logger(`"${name}": ${str}`);
         });
       } else {
@@ -80,11 +78,11 @@ module.exports = function cannibalizr (options) {
     }
   };
 
-  Object.keys(options.input).forEach((item) => {
-    options.input[item].forEach((input) => {
+  Object.keys(options.input).forEach(item => {
+    options.input[item].forEach(input => {
       const contents = fs.readFileSync(input.file, { encoding: 'utf8' });
 
-      input.captures.forEach((capSpec) => {
+      input.captures.forEach(capSpec => {
         let m;
 
         output[item] || (output[item] = []);
