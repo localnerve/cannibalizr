@@ -1,6 +1,6 @@
 {
   "name": "cannibalizr",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Turns an old pile of rusty files into a new json data source",
   "main": "index.js",
   "scripts": {
@@ -36,10 +36,10 @@
     "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
     "coveralls": "^3.0.9",
-    "eslint": "^6.7.2",
+    "eslint": "^7.18.0",
     "istanbul": "^0.4.5",
     "mkdirp": "^1.0.3",
-    "mocha": "^7.0.1",
+    "mocha": "^8.2.1",
     "precommit-hook": "^3.0.0"
   },
   "pre-commit": [
