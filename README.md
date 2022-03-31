@@ -3,8 +3,7 @@
 [![npm version](https://badge.fury.io/js/cannibalizr.svg)](http://badge.fury.io/js/cannibalizr)
 ![Verify](https://github.com/localnerve/cannibalizr/workflows/Verify/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/localnerve/cannibalizr/badge.svg?branch=master)](https://coveralls.io/r/localnerve/cannibalizr?branch=master)
-[![Dependency Status](https://david-dm.org/localnerve/cannibalizr.svg)](https://david-dm.org/localnerve/cannibalizr)
-[![devDependency Status](https://david-dm.org/localnerve/cannibalizr/dev-status.svg)](https://david-dm.org/localnerve/cannibalizr#info=devDependencies)
+
 
 > A tool to pull strings from multiple files into a json file using regexes.
 
