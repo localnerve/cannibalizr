@@ -4,20 +4,23 @@
  * for terms.
  */
 /*eslint no-console:0 */
-const path = require('path');
+import url from 'node:url';
+import path from 'node:path';
 
-module.exports = {
+const thisDirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+export default {
   output: {
     manifest: {
       id: 123,
       version: '0.1.0',
       whatever: 'string I want'
     },
-    file: path.join(__dirname, './tmp/test_out.json')
+    file: path.join(thisDirname, './tmp/test_out.json')
   },
   input: {
     assets: [{
-      file: path.join(__dirname, './files/_fonts.scss'),
+      file: path.join(thisDirname, './files/_fonts.scss'),
       captures: [{
         global: true,
         matchIndex: 1,
@@ -25,7 +28,7 @@ module.exports = {
       }]
     }],
     apis: [{
-      file: path.join(__dirname, './files/app.js'),
+      file: path.join(thisDirname, './files/app.js'),
       captures: [{
         global: false,
         matchIndex: 1,

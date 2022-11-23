@@ -1,7 +1,13 @@
 .DS_Store
 .travis.yml
 *.tgz
+.c8*
+.eslint*
+.git*
+babel*
 reports
+tests
+lib
 tmp
 package
 .jshint*

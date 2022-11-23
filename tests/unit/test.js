@@ -5,28 +5,28 @@
  */
 /* global before, beforeEach, describe, it */
 
-const fs = require('fs');
-const path = require('path');
-const expect = require('chai').expect;
-const mkdirp = require('mkdirp').sync;
+import fs from 'node:fs';
+import path from 'node:path';
+import { expect } from 'chai';
+import inputFixture from '../fixtures/options.js';
+import cannibalizr from '../../lib/index.js';
 
 describe('cannibalizr', () => {
-  const inputFixture = require('../fixtures/options');
-  const outputFixture = require('../fixtures/output.json');
-  const cannibalizr = require('../../index.js');
+  const outputJson = path.resolve('tests/fixtures/output.json');
+  const outputFixture = JSON.parse(fs.readFileSync(outputJson, { encoding: 'utf8' }));
 
   before('cannibalizr', () => {
     const outputDir = path.dirname(inputFixture.output.file);
-    mkdirp(outputDir);
+    fs.mkdirSync(outputDir, { recursive: true });
   });
 
   beforeEach(() => {
-    if (fs.existsSync(inputFixture.output.file)) {
+    try {
       fs.unlinkSync(inputFixture.output.file);
-    }
+    } catch (e) {} // eslint-disable-line
   });
 
-  it('should produce the expected output', (done) => {
+  it('should produce the expected output', done => {
     cannibalizr(inputFixture);
 
     fs.readFile(inputFixture.output.file, {
@@ -41,10 +41,12 @@ describe('cannibalizr', () => {
     const badOptions = JSON.parse(JSON.stringify(inputFixture));
     delete badOptions.output.file;
 
-    expect(function () {
+    expect(() => {
       cannibalizr(badOptions);
     }).to.throw(Error);
 
-    expect(fs.existsSync(inputFixture.output.file)).to.be.false;
+    expect(() => {
+      fs.accessSync(inputFixture.output.file)
+    }).to.throw(Error);
   });
 });
