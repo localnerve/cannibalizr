@@ -9,10 +9,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { expect } from 'chai';
 import inputFixture from '../fixtures/options.js';
-import outputFixture from '../fixtures/output.json' assert { type: 'json' };
 import cannibalizr from '../../lib/index.js';
 
 describe('cannibalizr', () => {
+  const outputJson = path.resolve('tests/fixtures/output.json');
+  const outputFixture = JSON.parse(fs.readFileSync(outputJson, { encoding: 'utf8' }));
+
   before('cannibalizr', () => {
     const outputDir = path.dirname(inputFixture.output.file);
     fs.mkdirSync(outputDir, { recursive: true });
