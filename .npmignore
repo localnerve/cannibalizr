@@ -7,7 +7,6 @@
 babel*
 reports
 tests
-lib
 tmp
 package
 .jshint*
