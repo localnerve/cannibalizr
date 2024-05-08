@@ -3,7 +3,6 @@
  * Copyrights licensed under the MIT License. See the accompanying LICENSE file
  * for terms.
  */
-/* global before, beforeEach, describe, it */
 
 import fs from 'node:fs';
 import path from 'node:path';
