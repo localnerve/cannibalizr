@@ -13,8 +13,7 @@
     "prepublishOnly": "rimraf ./dist && babel ./lib/index.js -o ./dist/index.cjs && node -e 'require(\"fs\").copyFileSync(\"./lib/index.js\", \"./dist/index.js\");'",
     "test": "mocha ./tests/unit --recursive --reporter spec",
     "cover": "c8 -- npm test",
-    "lint": "eslint .",
-    "validate": "npm ls"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
