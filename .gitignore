@@ -1,5 +1,5 @@
 .npm-debug.log
-reports
+coverage
 tmp
 node_modules
 .jshint*
