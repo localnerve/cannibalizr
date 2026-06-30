@@ -7,3 +7,4 @@ bundle.js
 *.tgz
 package
 dist
+.DS_Store
