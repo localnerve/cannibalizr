@@ -42,9 +42,9 @@
     "node": ">=20"
   },
   "devDependencies": {
-    "@babel/cli": "^7.28.6",
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.5",
+    "@babel/cli": "^8.0.1",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
     "@eslint/js": "^10.0.1",
     "eslint": "^10.3.0",
     "globals": "^17.6.0"
