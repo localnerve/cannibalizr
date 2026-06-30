@@ -32,7 +32,7 @@
   "files": [
     "dist/"
   ],
-  "author": "Alex Grant (@localnerve)",
+  "author": "Alex Grant <alex@localnerve> (https://www.localnerve.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/localnerve/cannibalizr/issues"
@@ -49,8 +49,14 @@
     "eslint": "^10.6.0",
     "globals": "^17.7.0"
   },
-  "pre-commit": [
-    "lint",
-    "test"
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/localnerve"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.com/ncp/payment/DHCB5GUYMGX5U"
+    }
   ]
 }
